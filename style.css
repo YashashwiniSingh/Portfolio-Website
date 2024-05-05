@@ -10,7 +10,9 @@
     font-family:monospace;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: black;
     color: white;
@@ -51,7 +53,7 @@ nav ul li a::after{
     content:'';
     width: 0;
     height: 3px;
-    background: white;
+    background: rgb(232, 2, 98);
     position: absolute;
     left:0;
     bottom:-6px;
@@ -139,7 +141,7 @@ nav ul li a:hover::after{
     margin-bottom: 15px;
 }
 .stack div:hover{
-    background: orangered;
+    background: rgb(232, 2, 98);
     transform: translateY(-10px);
 }
 
@@ -178,7 +180,7 @@ nav ul li a:hover::after{
     color:black;
 }
 .profile div:hover{
-    background: rgb(255, 197, 7);
+    background: rgb(232, 2, 98);
     transform: translateY(-10px);
 }
 .profile div a{
@@ -301,4 +303,11 @@ form .btn.btn2{
     text-decoration: none;
     color:white;
 }
-
+.copyright{
+    width: 100%;
+    text-align:center;
+    padding: 25px 0;
+    background:rgb(232, 2, 98);
+    font-weight: 300;
+    margin-top: 20px;
+}
