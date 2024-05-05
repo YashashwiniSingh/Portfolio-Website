@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'Jura';
+    src: url('Jura\static\Jura-Light.ttf') format('truetype'); /* Adjust the path as per your directory structure */
+    /* Add more src declarations for other font formats if available */
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family:monospace;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: white;
+}
+#header{
+    width: 100%;
+    height:100vh;
+    background-image: url(header.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 2%;
+}
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 250px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+/*-----------about----------*/
+#about{
+    padding: 80px 0; 
+    color: white;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.subtitle{
+    font-size: 55px;
+    font-weight:bold;
+    color:white;
+}
+.about-col-2 p{
+    padding-right: 150px;
+    font-family:monospace;
+    font-size: 17px;
+}
+
+/*-----------education----------*/
+.edu{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+/*-----------tech stack----------*/
+#techstack{
+    padding: 30px 0;
+}
+.stack{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.stack div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight:300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.stack div p{
+    font-size: 15px;
+}
+.stack div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.stack div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.stack div:hover{
+    background: orangered;
+    transform: translateY(-10px);
+}
+
+/*-----------coding profile----------*/
+#coding{
+    padding: 30px 0;
+}
+.profile{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.profile div{
+    background: rgb(138, 136, 136);
+    padding: 40px;
+    font-size: 13px;
+    font-weight:bolder;
+    border-radius: 10px;
+    margin-bottom: 80px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.profile div svg{
+    font-size: 50px;
+    margin-bottom: 30px;
+    width: 60px;
+    height: 60px;
+}
+.profile div h2{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    color:black;
+}
+.profile div:hover{
+    background: rgb(255, 197, 7);
+    transform: translateY(-10px);
+}
+.profile div a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+/*-----------contact----------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 5%;
+    font-size: 15px;
+}
+.contact-left p i{
+    margin-right: 10px;
+    margin-left: 110px;
+    font-size:30px;
+    color:rgb(232, 2, 98)
+}
+.social-icons{
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-left: 110px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:rgb(232, 2, 98);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:rgb(254, 252, 252);
+    transform:translateY(-5px);
+}
+.btn.btn2{
+    text-decoration: none;
+    display:inline-block;
+    background:rgb(232, 2, 98);
+    padding: 14px 60px;
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 110px;
+}
+.contact-right{
+    width:100%;
+}
+form input, form textarea{
+    width:100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn.btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 55px;
+}
+/*----------projects---------*/
+#project{
+    padding: 30px 0;
+}
+.work{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 90px;
+}
+.work div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight:300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    
+}
+.work div p{
+    font-size: 15px;
+    color:white;
+}
+.work div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.work div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.work div:hover{
+    background: rgb(232, 2, 98);
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.work div a{
+    text-decoration: none;
+    color:white;
+}
+
